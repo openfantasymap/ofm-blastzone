@@ -1,14 +1,22 @@
 {
-  "name": "blastzone",
-  "title": "Blast Zone",
+  "id": "ofm-blastzone",
+  "name": "ofm-blastzone",
+  "title": "FantasyMaps Blast Zone",
   "description": "Blow up walls with templates",
-  "version": "0.1",
+  "version": "0.2",
+  "library": "true",
+  "manifestPlusVersion": "1.2.0",
   "authors": [
-      {
-          "name": "theripper93",
-          "email": "tsplab@gmail.com",
-          "url": "https://www.patreon.com/theripper93"
-      }
+    {
+        "name": "theripper93",
+        "email": "tsplab@gmail.com",
+        "url": "https://www.patreon.com/theripper93"
+    },
+    {
+        "name": "FantasyMaps [OpenHistoryMap team]",
+        "url": "https://www.fantasymaps.org",
+        "discord": "sirmmo#0100"
+    }
   ],
   "languages": [
       {
@@ -17,20 +25,19 @@
           "path": "languages/en.json"
       }
   ],
-  "scripts": [
+  "esmodules": [
       "./scripts/main.js",
-      "./scripts/config.js",
       "./scripts/BlastZone.js"
   ],
   "styles": [
   ],
-  "packs": [
-  ],
-  "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "0.8.8",
+  "minimumCoreVersion": 9,
+  "compatibleCoreVersion": "10.284.0",
+  "compatibility": {
+    "minimum": 9, 
+    "verified": "10.284"
+  },
   "url": "https://github.com/theripper93/blastzone",
   "manifest": "https://github.com/theripper93/blastzone/releases/latest/download/module.json",
-  "download": "https://github.com/theripper93/blastzone/releases/latest/download/module.zip",
-  "dependencies": [
-  ]
+  "download": "https://github.com/theripper93/blastzone/releases/latest/download/module.zip"
 }

@@ -1,6 +1,7 @@
 class TemplateGeometry {
   constructor(template) {
     this.template = template;
+    this.scene = template.scene;
     this.polygon = this.getPolygon(template);
   }
 
@@ -38,7 +39,7 @@ class TemplateGeometry {
   }
 
   static getCone(tData) {
-    const shape = tData.document._object.shape;
+    const shape = tData._object.shape;
     let points = [];
     for (let i = 0; i < shape.points.length; i += 2) {
       points.push(shape.points[i] + tData.x);
@@ -48,7 +49,7 @@ class TemplateGeometry {
   }
 
   static getRectangle(tData) {
-    const ray = tData.document._object.ray;
+    const ray = tData._object.ray;
     const points = [
       tData.x,
       tData.y,
@@ -65,7 +66,7 @@ class TemplateGeometry {
   }
 
   static getRay(tData) {
-    const ray = tData.document._object.ray;
+    const ray = tData._object.ray;
     const o = ray.A;
     const wp = (tData.width * TemplateGeometry.unitToPx()) / 2;
     const c1 = ray.B;
@@ -195,7 +196,7 @@ class TemplateGeometry {
 }
 }
 
-class BlastZone {
+export class BlastZone {
   constructor(template) {
     this.template = template;
     this.wallsToDestroy = [];
@@ -328,6 +329,9 @@ class BlastZone {
 
           break;
       }
+    }
+    if(this.scene.flags.ofm){
+      Hooks.call('ofmSharedWorldChange', {"type": "blast", data: this.templateGeometry, scene: this.scene})
     }
     return { toDestry: this.wallsToDestroy, toCreate: this.wallsToCreate };
   }
