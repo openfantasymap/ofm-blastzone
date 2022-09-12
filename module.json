@@ -2,7 +2,7 @@
   "id": "ofm-blastzone",
   "name": "ofm-blastzone",
   "title": "FantasyMaps Blast Zone",
-  "description": "Blow up walls with templates",
+  "description": "Blow up walls with templates, evolution and update to theripper93's original blastzone. Integrates with Fantasymaps Shared Worlds (enables you to destroy the world around you)",
   "version": "0.2",
   "library": "true",
   "manifestPlusVersion": "1.2.0",

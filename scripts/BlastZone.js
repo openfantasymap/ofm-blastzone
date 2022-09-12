@@ -330,8 +330,8 @@ export class BlastZone {
           break;
       }
     }
-    if(this.scene.flags.ofm){
-      Hooks.call('ofmSharedWorldChange', {"type": "blast", data: this.templateGeometry, scene: this.scene})
+    if(this.template.scene.flags.ofm){
+      Hooks.call('ofmSharedWorldChange', {"event": {"type": "blast", data: this.templateGeometry.polygon}, scene: this.template.scene})
     }
     return { toDestry: this.wallsToDestroy, toCreate: this.wallsToCreate };
   }
