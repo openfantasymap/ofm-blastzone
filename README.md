@@ -1,7 +1,8 @@
-# Blastzone
-## This Module is no longer supported, if you wish to adopt the module feel free to contact me on my discord https://theripper93.com/
+# FantasyMaps Blastzone
+Based on theripper93's original FoundryVTT BlastZone, it integrates with FantasyMaps Shared World system. 
+
 ## The most dangerous module on foundry
-## Blast away those pesky walls using templates
+Blast away those pesky walls using templates
 
 Before the blast
 
